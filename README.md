@@ -1,9 +1,17 @@
 # Kafka Demo Playground
 
+## Setup
 
+```
+python3 -m venv venv
+source venv/bin/activate
+pip install kafka-python
+```
+
+## Start Kafka 
 
 ```bash
-$ docker-compuse up -d
+$ docker-compose up -d
 
 $ docker exec -t kafka-presentation_kafka_1 kafka-topics.sh --bootstrap-server :9092 --create --topic names --partitions 2 --replication-factor 1
 
